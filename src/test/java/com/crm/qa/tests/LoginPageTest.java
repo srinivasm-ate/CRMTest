@@ -25,13 +25,14 @@ public class LoginPageTest extends TestBase
 	@BeforeMethod
 	public void setup()
 	{
-		intilization();
+		Intialization();
 	}
 	
 	@Test(priority=0)
 	public void logotest()
 	{
-		boolean b=lpage.verifylogo();
+		boolean b=lpage.logocheck();
+
 		assertTrue(b);
 	}
 	
@@ -44,7 +45,7 @@ public class LoginPageTest extends TestBase
 	@Test(priority=2)
 	public void Titletest()
 	{
-		String title=lpage.verifytitle();
+		String title=lpage.title();
 		Assert.assertEquals(title, "#1 Free CRM for Any Business: Online Customer Relationship Software");
 	}
 	
